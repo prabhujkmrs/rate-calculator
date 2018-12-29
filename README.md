@@ -3,11 +3,11 @@ It is a simple java application that calculates the rate allowing the prospectiv
 
 
 ## Future considerations
-Convert the application to a RESTful webservice to get quote over http
+1. Convert the application to a RESTful webservice to get quote over HTTP.
+2. There is a small difference in the monthly and total repayment numbers probably because of the rate calculation logic. Need to make slight adjustment to the rate calculation method to achieve precision.
 
 ## Requirements
-  You will need a file containing a list of all the offers being made  by the lenders within the system in CSV format. 
-  [Click here](src/main/java/resource/market-data.csv) for sample file
+  You will need a file containing a list of all the offers being made  by the lenders within the system in CSV format.A sample csv file can be found in the resource directory of the project.
   
     You should strive to provide as low a rate to the borrower as is possible to  ensure that Zopa's quotes are as competitive as they can be against our  competitors'. 
   
@@ -69,7 +69,7 @@ To run the application, execute:
 ```
 java -jar build/libs/rate-calculator-1.0.0.jar <path-to-the-market-data-csv-file> <required loan amount>
 
-Example: java -jar build/libs/rate-calculator-1.0.0.jar /home/zopa/market-datah.csv 1000
+Example: java -jar build/libs/rate-calculator-1.0.0.jar /home/zopa/market-data.csv 1000
 ```
 
 

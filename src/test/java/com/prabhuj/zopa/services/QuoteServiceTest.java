@@ -1,7 +1,6 @@
 package com.prabhuj.zopa.services;
 
 import com.prabhuj.zopa.models.Lender;
-import com.prabhuj.zopa.models.Quote;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -18,14 +17,14 @@ public class QuoteServiceTest {
     private QuoteService quoteService = new QuoteServiceImpl();
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         lendersList.add(new Lender("Alex", BigDecimal.valueOf(0.065), 300));
         lendersList.add(new Lender("Gary", BigDecimal.valueOf(0.075), 700));
         lendersList.add(new Lender("Sophie", BigDecimal.valueOf(0.085), 300));
     }
 
     @Test
-    public void shouldreturnInterestRateForTheListOfLenderDetails() {
+    public void shouldReturnInterestRateForTheListOfLenderDetails() {
         Double actualRate = quoteService.getInterestRate(lendersList);
         Double expectedRate = 0.08;
         assertEquals(expectedRate,actualRate);

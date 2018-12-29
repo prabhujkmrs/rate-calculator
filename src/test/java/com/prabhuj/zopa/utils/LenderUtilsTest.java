@@ -2,9 +2,7 @@ package com.prabhuj.zopa.utils;
 
 import com.prabhuj.zopa.models.Lender;
 import org.junit.Before;
-import org.junit.Rule;
 import org.junit.Test;
-import org.junit.rules.ExpectedException;
 
 import java.io.IOException;
 import java.math.BigDecimal;
@@ -18,7 +16,7 @@ public class LenderUtilsTest {
     private List<Lender> lendersList = new ArrayList<>();
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         lendersList.add(new Lender("Alex", BigDecimal.valueOf(0.065), 300));
         lendersList.add(new Lender("Gary", BigDecimal.valueOf(0.075), 700));
         lendersList.add(new Lender("Sophie", BigDecimal.valueOf(0.085), 300));

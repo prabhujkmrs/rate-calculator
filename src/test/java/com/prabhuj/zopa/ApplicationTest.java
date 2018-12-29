@@ -18,7 +18,6 @@ public class ApplicationTest {
     @Test
     public void testApplicationMain(){
         Application.main(new String[] {"src/test/resources/test-data.csv", "1000"});
-
     }
 
 }
